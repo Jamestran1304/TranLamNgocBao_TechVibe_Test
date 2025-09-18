@@ -1,0 +1,130 @@
+.currency-selector {
+  width: 100%;
+}
+
+.currency-option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 0;
+}
+
+.currency-option.selected {
+  color: white;
+}
+
+.currency-option.focused {
+  background-color: #f3f4f6;
+}
+
+.currency-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f3f4f6;
+  flex-shrink: 0;
+}
+
+.currency-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.currency-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+}
+
+.currency-symbol {
+  font-weight: 600;
+  font-size: 16px;
+  color: #111827;
+}
+
+.currency-price {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.currency-option.selected .currency-symbol,
+.currency-option.selected .currency-price {
+  color: white;
+}
+
+.currency-single-value {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.currency-control {
+  background-color: white;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  min-height: 60px;
+  transition: all 0.2s ease;
+}
+
+.currency-control:hover {
+  border-color: #d1d5db;
+}
+
+.currency-control:focus-within {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.currency-select.error .currency-control {
+  border-color: #ef4444;
+}
+
+.currency-select.error .currency-control:focus-within {
+  border-color: #ef4444;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+.error-message {
+  color: #ef4444;
+  font-size: 14px;
+  margin-top: 8px;
+  font-weight: 500;
+}
+
+/* Custom dropdown arrow */
+.currency-select .currency-select__dropdown-indicator {
+  color: #6b7280;
+  padding: 0 16px;
+}
+
+.currency-select .currency-select__dropdown-indicator:hover {
+  color: #374151;
+}
+
+/* Loading state */
+.currency-select .currency-select__loading-indicator {
+  color: #6b7280;
+}
+
+/* No options message */
+.currency-select .currency-select__no-options-message {
+  color: #6b7280;
+  font-style: italic;
+  padding: 16px;
+  text-align: center;
+}
+
+/* Search input */
+.currency-select .currency-select__input {
+  color: #111827;
+}
+
+.currency-select .currency-select__placeholder {
+  color: #9ca3af;
+}
